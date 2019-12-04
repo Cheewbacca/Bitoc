@@ -1,0 +1,63 @@
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="static\css\main.css"/>
+    <link rel="stylesheet" href="static\css\nouislider.css"/>
+    <title>Document</title>
+  </head>
+  <body><a class="logo" href="#"><img src="static\img\svg\logo.svg" alt=""/></a>
+    <div class="alert yellow">
+      <div class="white-box"><img src="static\img\svg\email.svg" alt=""/></div>
+      <p>Подтвердите верификацию на email</p>
+    </div>
+    <div class="wrapper">
+      <div class="registration">
+        <div class="web-ico"><img src="static\img\svg\www-2.svg" alt=""/></div>
+        <h1>Регистрация</h1>
+        <form action="#" method="#">
+          <div class="form-element"><span>Имя</span>
+            <input type="text" placeholder="Вася"/>
+          </div>
+          <div class="form-element"><span>Фамилия</span>
+            <input type="text" placeholder="Сидоров"/>
+          </div>
+          <div class="form-element"><span>Email</span>
+            <input type="email" placeholder="nikolas@gmail.com"/>
+          </div>
+          <div class="form-element" id="arrow"><span>Выберите гражданство</span>
+            <div class="arrow"></div>
+            <select> 
+              <option value="USA">USA</option>
+              <option value="Ukraine">Ukraine</option>
+              <option value="Ukraine">Ukraine</option>
+              <option value="Ukraine">Ukraine</option>
+              <option value="Ukraine">Ukraine</option>
+              <option value="Ukraine">Ukraine</option>
+            </select>
+          </div>
+          <div class="form-element"><span>Пароль</span>
+            <input type="password" placeholder="**************"/>
+          </div>
+          <div class="form-element"><span>Повторите пароль</span>
+            <input type="password" placeholder="**************"/>
+          </div>
+          <div class="form-element" id="range"><span>Ожидаемый доход</span>
+            <input type="numbers" value="2000" id="dollars"/>
+            <div id="r-slider"> </div>
+          </div>
+          <div class="form-element" id="check">
+            <input type="checkbox" name="checkbox" id="checkbox"/>
+            <label for="checkbox">Я принимаю условия и т.д.</label>
+          </div>
+          <div class="form-element">
+            <input type="submit" value="Завершить регистрацию" id="subm"/>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
+<script src="static\\js\\nouislider.js"> </script>
+<script src="static\\js\\main.js"> </script>
+</html>
