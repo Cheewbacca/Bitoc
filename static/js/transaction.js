@@ -22,5 +22,5 @@ $(document).ready(function () {
 });
 
 $('.alert').click(function(){
-    $('.alert').css("bottom", "-90px");
+    $('.alert').css("display", "none");
 });

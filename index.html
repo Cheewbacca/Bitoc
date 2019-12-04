@@ -8,9 +8,10 @@
     <title>Document</title>
   </head>
   <body><a class="logo" href="#"><img src="static\img\svg\logo.svg" alt=""/></a>
-    <div class="alert yellow">
-      <div class="white-box"><img src="static\img\svg\email.svg" alt=""/></div>
-      <p>Подтвердите верификацию на email</p>
+    <div class="alert yellow" id="alrt">
+      <div class="msg"><img src="static\img\svg\load.svg" alt=""/>
+        <p>Подтвердите верификацию на email</p>
+      </div>
     </div>
     <div class="wrapper">
       <div class="registration">
@@ -28,7 +29,7 @@
           </div>
           <div class="form-element" id="arrow"><span>Выберите гражданство</span>
             <div class="arrow"></div>
-            <select> 
+            <select>
               <option value="USA">USA</option>
               <option value="Ukraine">Ukraine</option>
               <option value="Ukraine">Ukraine</option>
@@ -43,7 +44,7 @@
           <div class="form-element"><span>Повторите пароль</span>
             <input type="password" placeholder="**************"/>
           </div>
-          <div class="form-element" id="range"><span>Ожидаемый доход</span>
+          <div class="form-element" id="range"><span>Ожидаемая сумма инвестиций</span>
             <input type="numbers" value="2000" id="dollars"/>
             <div id="r-slider"> </div>
           </div>

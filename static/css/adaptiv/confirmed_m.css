@@ -1,0 +1,14 @@
+body {
+  font-family: Montserrat;
+  color: #8295c2;
+  margin: initial;
+  height: 100%; }
+  body .alert {
+    width: 90%;
+    margin-left: -45%;
+    z-index: 1000000000000; }
+    body .alert p {
+      color: white;
+      font-size: 15px; }
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFkYXB0aXYvY29uZmlybWVkX20uc2FzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLHVCQUF1QjtFQUN2QixjQUFjO0VBQ2QsZUFBZTtFQUNmLFlBQVksRUFBQTtFQUpoQjtJQU1RLFVBQVU7SUFDVixpQkFBaUI7SUFDakIsc0JBQXNCLEVBQUE7SUFSOUI7TUFVWSxZQUFZO01BQ1osZUFBZSxFQUFBIiwiZmlsZSI6ImFkYXB0aXYvY29uZmlybWVkX20uY3NzIiwic291cmNlc0NvbnRlbnQiOlsiYm9keSB7XG4gICAgZm9udC1mYW1pbHk6IE1vbnRzZXJyYXQ7XG4gICAgY29sb3I6ICM4Mjk1YzI7XG4gICAgbWFyZ2luOiBpbml0aWFsO1xuICAgIGhlaWdodDogMTAwJTtcbiAgICAuYWxlcnQge1xuICAgICAgICB3aWR0aDogOTAlO1xuICAgICAgICBtYXJnaW4tbGVmdDogLTQ1JTtcbiAgICAgICAgei1pbmRleDogMTAwMDAwMDAwMDAwMDtcbiAgICAgICAgcCB7XG4gICAgICAgICAgICBjb2xvcjogd2hpdGU7XG4gICAgICAgICAgICBmb250LXNpemU6IDE1cHg7IH0gfSB9XG4iXX0= */

@@ -17,24 +17,36 @@ noUiSlider.create(range, {
     padding: 0,
 
     range: {
-        'min': 0,
-        'max': 3250
+        'min': 100,
+        'max': 50000
     }
 });
 
 var updateSliderValue = document.getElementById('dollars');
 
 range.noUiSlider.on('update', function (values, handle) {
-    updateSliderValue.value = values[handle] + " $";
+    updateSliderValue.value = values[handle] + "+" + " $";
 });
 
 updateSliderValue.addEventListener("change", function(){
-    let temp = updateSliderValue.value.split("$"); 
+    let temp = updateSliderValue.value.split("+"); 
     range.noUiSlider.set(temp);
 });
 
-$('#subm').click(function(){
+$('#subm').click(function(e){
+    e.preventDefault();
     $('.wrapper').addClass('milk');
-    $('.alert').css("top", "0");
+    $('.alert').css({"top":"0", "z-index":"1000000000"});
+    $(this).unbind('submit').submit()
 });
+
+// var subm = document.getElementById('subm');
+// var wrap = document.getElementsByClassName('wrapper');
+// var alrt = document.getElementById('alrt');
+
+// subm.onsubmit = function(){
+//     wrap.className += "milk";
+//     alrt.style.top = "0px";
+//     alrt.style.zIndex = "10000000";
+// };
 
