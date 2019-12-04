@@ -22,5 +22,11 @@ $(document).ready(function () {
 });
 
 $('.alert').click(function(){
-    $('.alert').css("display", "none");
+  $('.alert').css("display", "none");
 });
+
+$('#trans').click(function(e){
+  e.preventDefault();
+  $('.milk').css("display","none");
+})
+

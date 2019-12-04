@@ -35,7 +35,7 @@ updateSliderValue.addEventListener("change", function(){
 
 $('#subm').click(function(e){
     e.preventDefault();
-    $('.wrapper').addClass('milk');
+    $('.milk').css("display", "block");
     $('.alert').css({"top":"0", "z-index":"1000000000"});
     $(this).unbind('submit').submit()
     $("html, body").animate({ scrollTop: 0 }, "slow");
