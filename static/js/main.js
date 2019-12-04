@@ -38,15 +38,61 @@ $('#subm').click(function(e){
     $('.wrapper').addClass('milk');
     $('.alert').css({"top":"0", "z-index":"1000000000"});
     $(this).unbind('submit').submit()
+    $("html, body").animate({ scrollTop: 0 }, "slow");
 });
 
-// var subm = document.getElementById('subm');
-// var wrap = document.getElementsByClassName('wrapper');
-// var alrt = document.getElementById('alrt');
+$(function () {
+	$(window).scroll(function () {
+		if ($(this).scrollTop() >= '750' && $(this).width() >= '480') {
+			$('.button').fadeIn();
+		} else {
+			if ( $(this).scrollTop() >= '240' && $(this).width() < '480'){
+				$('.button').fadeIn();
+			}
+			else{
+				$('.button').fadeOut();
+			}
+			
+		}
+	});
+});
 
-// subm.onsubmit = function(){
-//     wrap.className += "milk";
-//     alrt.style.top = "0px";
-//     alrt.style.zIndex = "10000000";
-// };
-
+// document.getElementById('subm').addEventListener('submit', function(event){
+//     event.preventDefault();
+  
+//     let form = event.target;
+//     console.log(window.e = event, window.f = event.target);
+//     // return;
+  
+//     $.ajax({
+//       type: 'post',
+//       url: form.action,
+//       dataType: 'json',
+//       data: {
+//         _token: form['_token'].value,
+//         wallet: form.wallet.value,
+//       },
+//       success: function(data, status){
+//         console.log(data, status);
+//         if(data.success == true)   alert(data.message);
+//         else             alert('Error: ' + data.message);
+//       },
+//       error: function(data, status){
+//         console.log(data, status);
+//               if(data.status == 422 && data.responseJSON && data.responseJSON.errors){
+//                   alert('Invalid form');
+//                   let errors = '';
+//                   for(e in data.responseJSON.errors){
+//                       errors += data.responseJSON.errors[e].join('\n') + '\n';
+//                   }
+//                   alert(errors);
+//                   return;
+//               }
+//               if(data.status == 302){
+  
+//                   return;
+//               }
+//               alert('Server error, try again later!');
+//       }
+//     });
+//   });
