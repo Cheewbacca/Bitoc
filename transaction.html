@@ -6,7 +6,10 @@
     <link rel="stylesheet" href="static\css\transaction.css"/>
     <title>Document</title>
   </head>
-  <body><a class="logo" href="#"><img src="static\img\svg\logo.svg" alt=""/></a><a class="logout" href="#">Log out</a>
+  <body><a class="logo" href="#"><img src="static\img\svg\logo.svg" alt=""/></a>
+    <form>
+      <button class="logout" type="submit">Log out</button>
+    </form>
     <div class="milk">
       <div class="milk-box">
         <div class="message-bad"><img src="static\img\png\stop.png" alt=""/>
@@ -57,8 +60,13 @@
           <div class="names"><span>$ 2000, 000</span><span>$ 6000, 000</span><span>$ 12000, 000</span></div>
         </div>
         <h1>Совершите транзакцию</h1>
-        <p>Имя пользователя: Вася <br/> Сумма перевода  <br/><span id="sum">00.1btc</span></p>
         <form action="#">
+          <div class="form-money"><span>Количество токенов</span>
+            <input type="number" placeholder="100"/>
+          </div>
+          <div class="form-money"><span>Сумма перевода</span>
+            <input type="number" placeholder="2000"/>
+          </div>
           <div class="form-element"><span>Вбить свой номер кошелька</span>
             <input type="text" placeholder="8800"/>
           </div>
@@ -67,20 +75,10 @@
             <div class="arrow"></div>
             <div class="arrow"> </div>
             <div class="arrow"> </div>
-          </div>
-          <div class="arrows">
             <div class="arrow"> </div>
             <div class="arrow"></div>
             <div class="arrow"> </div>
             <div class="arrow"> </div>
-          </div>
-          <div class="arrows">
-            <div class="arrow"> </div>
-            <div class="arrow"></div>
-            <div class="arrow"> </div>
-            <div class="arrow"> </div>
-          </div>
-          <div class="arrows">
             <div class="arrow"> </div>
             <div class="arrow"></div>
             <div class="arrow"> </div>
