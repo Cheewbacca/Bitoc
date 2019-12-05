@@ -1,13 +1,3 @@
-$(document).ready(function () {
-    $('input,textarea').focus(function(){
-      $(this).data('placeholder',$(this).attr('placeholder'))
-      $(this).attr('placeholder','');
-    });
-    $('input,textarea').blur(function(){
-      $(this).attr('placeholder',$(this).data('placeholder'));
-    });
-});
-
 var range = document.getElementById('r-slider');
 
 noUiSlider.create(range, {
@@ -17,19 +7,19 @@ noUiSlider.create(range, {
     padding: 0,
 
     range: {
-        'min': 100,
-        'max': 50000
+        'min': 16,
+        'max': 1000000
     }
 });
 
 var updateSliderValue = document.getElementById('dollars');
 
 range.noUiSlider.on('update', function (values, handle) {
-    updateSliderValue.value = values[handle] + "+" + " $";
+    updateSliderValue.value = values[handle] + " $";
 });
 
 updateSliderValue.addEventListener("change", function(){
-    let temp = updateSliderValue.value.split("+"); 
+    let temp = updateSliderValue.value.split("$"); 
     range.noUiSlider.set(temp);
 });
 
