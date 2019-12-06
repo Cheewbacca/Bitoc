@@ -23,13 +23,13 @@ updateSliderValue.addEventListener("change", function(){
     range.noUiSlider.set(temp);
 });
 
-$('#subm').click(function(e){
-    e.preventDefault();
-    $('.milk').css("display", "block");
-    $('.alert').css({"top":"0", "z-index":"1000000000"});
-    $(this).unbind('submit').submit()
-    $("html, body").animate({ scrollTop: 0 }, "slow");
-});
+// $('#subm').click(function(e){
+//     e.preventDefault();
+//     $('.milk').css("display", "block");
+//     $('.alert').css({"top":"0", "z-index":"1000000000"});
+//     $(this).unbind('submit').submit()
+//     $("html, body").animate({ scrollTop: 0 }, "slow");
+// });
 
 $(function () {
 	$(window).scroll(function () {
