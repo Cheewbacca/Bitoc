@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="static\css\nouislider.css"/>
     <title>Document</title>
   </head>
-  <body><a class="logo" href="#"><img src="static\img\svg\logo.svg" alt=""/></a>
+  <body><a class="logo" href="transaction.html"><img src="static\img\svg\logo.svg" alt=""/></a>
     <div class="alert yellow" id="alrt">
       <div class="msg"><img src="static\img\svg\email-3.svg" alt=""/>
         <p>Подтвердите верификацию на email</p>
@@ -15,6 +15,14 @@
     </div>
     <div class="milk"></div>
     <div class="wrapper">
+      <div class="right-err-msg" id="right-err">
+        <div class="cross"></div>
+        <h2>Ошибка при регистрации</h2>
+        <ol>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, ipsam.</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, ipsam.</li>
+        </ol>
+      </div>
       <div class="registration">
         <div class="web-ico"><img src="static\img\svg\www-2.svg" alt=""/></div>
         <h1>Регистрация</h1>
@@ -28,9 +36,9 @@
           <div class="form-element"><span>Email</span>
             <input type="email" placeholder="nikolas@gmail.com"/>
           </div>
-          <div class="form-element" id="arrow"><span>Выберите гражданство</span>
+          <div class="form-element" id="arrow"><span id="red-msg">Выберите гражданство</span>
             <div class="arrow"></div>
-            <select>
+            <select id="red-msg">
               <option value="USA">USA</option>
               <option value="Ukraine">Ukraine</option>
               <option value="Ukraine">Ukraine</option>
@@ -39,11 +47,11 @@
               <option value="Ukraine">Ukraine</option>
             </select>
           </div>
-          <div class="form-element"><span>Пароль</span>
-            <input type="password" placeholder="**************"/>
+          <div class="form-element" id="red-msg"><span id="red-msg">Пароль</span>
+            <input type="password" placeholder="**************" id="red-msg"/>
           </div>
-          <div class="form-element"><span>Повторите пароль</span>
-            <input type="password" placeholder="**************"/>
+          <div class="form-element" id="red-msg"><span id="red-msg">Повторите пароль</span>
+            <input type="password" placeholder="**************" id="red-msg"/>
           </div>
           <div class="form-element" id="range"><span>Ожидаемая сумма инвестиций</span>
             <input type="numbers" value="2000" id="dollars"/>

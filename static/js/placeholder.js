@@ -7,3 +7,8 @@ $(document).ready(function () {
       $(this).attr('placeholder',$(this).data('placeholder'));
     });
 });
+
+
+$('#right-err').click(function(){
+  $('#right-err').css("right", "-390px");
+});
