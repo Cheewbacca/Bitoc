@@ -13,9 +13,12 @@ noUiSlider.create(range, {
 });
 
 var updateSliderValue = document.getElementById('dollars');
+var updateSliderValueDLR = document.getElementById('dlr');
+
 
 range.noUiSlider.on('update', function (values, handle) {
-    updateSliderValue.value = values[handle] + " $";
+	updateSliderValue.value = values[handle] + " $";
+	updateSliderValueDLR = value[handle];
 });
 
 updateSliderValue.addEventListener("change", function(){
