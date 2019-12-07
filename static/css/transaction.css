@@ -488,9 +488,8 @@ body {
             position: absolute;
             right: 33%; }
           body .wrapper .content .progress-bar-box .progress-bar .progress {
-            background: #4573de;
-            background: -webkit-gradient(linear, left top, left bottom, from(#4573DE), to(#4573DE));
-            background: linear-gradient(to bottom, #4573DE, #4573DE);
+
+            background: #AAA;
             border-radius: inherit;
             height: 30px;
             width: 0;
@@ -723,7 +722,9 @@ body {
         body .wrapper .content .progress-bar-box {
           width: 100%; }
           body .wrapper .content .progress-bar-box .progress-bar {
-            margin: initial; }
+            margin: 0 auto;
+            margin-top: 10px;
+            margin-bottom: 10px; }
         body .wrapper .content form {
           -webkit-box-pack: center;
               -ms-flex-pack: center;
@@ -774,6 +775,7 @@ body {
   100% {
     -webkit-transform: translateY(0%);
             transform: translateY(0%); } }
+
 
 #first {
   -moz-placeholder-color: #4573DE;
