@@ -68,7 +68,9 @@ body {
         @media screen and (max-width: 500px) {
           body .wrapper .content form .money {
             width: 100%;
-            min-width: initial; } }
+            min-width: initial;
+            
+             }}
         body .wrapper .content form .form-element {
           margin-top: 30px;
           width: 100%; }

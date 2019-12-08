@@ -11,7 +11,8 @@ body {
   font-family: Montserrat;
   color: #4573de;
   margin: initial;
-  overflow: hidden; }
+  overflow: hidden;
+  text-transform: uppercase; }
   body a {
     width: 210px;
     height: 40px;
@@ -535,19 +536,22 @@ body {
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
+          min-height: 170px;
           -webkit-box-pack: center;
               -ms-flex-pack: center;
                   justify-content: center;
           min-width: 400px;
           margin-left: 20px; }
           body .wrapper .content form .money .form-money {
-            width: 150px;
+            width: auto;
             height: 100%;
+            white-space: nowrap;
             margin: 20px 20px 10px 20px;
             -moz-placeholder-color: #4573DE;
             -moz-placeholder-font-weight: bold;
             -ms-input-placeholder-color: #4573DE;
-            -ms-input-placeholder-font-weight: bold; }
+            -ms-input-placeholder-font-weight: bold;
+             }
             body .wrapper .content form .money .form-money img {
               display: block;
               margin: 0 auto;
@@ -735,7 +739,8 @@ body {
         @media screen and (max-width: 1335px) and (max-width: 500px) {
           body .wrapper .content form .money {
             width: 100%;
-            min-width: initial; } }
+            min-width: initial;
+           } }
 
 @media screen and (max-width: 1335px) {
           body .wrapper .content form .form-element {
@@ -753,6 +758,13 @@ body {
 @media screen and (max-width: 1335px) and (max-width: 1000px) {
   #progr {
     display: none; } }
+
+@media screen and (max-width: 500px){
+  body .wrapper .content form .money .form-money{
+    height: 150px;
+    margin-right: 7px;
+  }
+}
 
 @-webkit-keyframes floating {
   0% {
