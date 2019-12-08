@@ -1,10 +1,26 @@
-const progress_bars = document.querySelectorAll('.progress');
+(function(){
+  let progress = document.getElementById('progress-container');
+  let sections = progress.getAttribute('data-progress-sections'),
+    current = parseInt(progress.getAttribute('data-progress-current')),
+    value = parseInt(progress.getAttribute('data-progress-value'));
+  
+  sections = sections.split(',');
+  for(let i = 0; i < sections.length; i++) sections[i] = parseInt(sections[i]);
 
-progress_bars.forEach(bar => {
-    const { size } = bar.dataset;
-    bar.style.width = `${size}%`;
-});
-
+  if(
+    sections.some(function(elem){ return isNaN(elem) || elem < 1 }) || 
+    isNaN(current) ||
+    isNaN(value) ||
+    current < 1 ||
+    current > sections.length ||
+    value < 0 ||
+    value > sections[sections.length - 1]
+  ){
+    console.error('Illegal values for progress markup.');
+    return;
+  }
+  progress.style.width = (value * (100 / sections.length) / sections[current - 1]) + '%';
+})();
 
 $('#trans').click(function(e){
   e.preventDefault();

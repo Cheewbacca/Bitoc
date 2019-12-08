@@ -8,7 +8,7 @@ noUiSlider.create(range, {
 
     range: {
         'min': 16,
-        'max': 1000000
+        'max': 500000
     }
 });
 
@@ -18,7 +18,7 @@ var updateSliderValueDLR = document.getElementById('dlr');
 
 range.noUiSlider.on('update', function (values, handle) {
 	updateSliderValue.value = values[handle] + " $";
-	updateSliderValueDLR = value[handle];
+	updateSliderValueDLR = values[handle];
 });
 
 updateSliderValue.addEventListener("change", function(){
