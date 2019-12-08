@@ -1,25 +1,22 @@
 (function(){
   let progress = document.getElementById('progress-container');
   let sections = progress.getAttribute('data-progress-sections'),
-    current = parseInt(progress.getAttribute('data-progress-current')),
-    value = parseInt(progress.getAttribute('data-progress-value'));
-  
-  sections = sections.split(',');
-  for(let i = 0; i < sections.length; i++) sections[i] = parseInt(sections[i]);
+    value = parseInt(progress.getAttribute('data-progress-value')),
+    current;
 
-  if(
-    sections.some(function(elem){ return isNaN(elem) || elem < 1 }) || 
-    isNaN(current) ||
-    isNaN(value) ||
-    current < 1 ||
-    current > sections.length ||
-    value < 0 ||
-    value > sections[sections.length - 1]
-  ){
-    console.error('Illegal values for progress markup.');
-    return;
+  if(isNaN(value) || value < 0) throw new Error('Invalid progress value');
+  
+  current = null;
+  sections = sections.split(',');
+  for(let i = 0; i < sections.length; i++){
+    sections[i] = parseInt(sections[i]);
+    if(isNaN(sections[i]) || sections[i] < 1) throw new Error('Invalid values for sections markup');
+    if(value <= sections[i] && current == null) current = i;
   }
-  progress.style.width = (value * (100 / sections.length) / sections[current - 1]) + '%';
+  if(current == null) throw new Error('Progress value is bigger that last section limit');
+  current++;
+
+  progress.style.width = (value * ((100 / sections.length) * current) / sections[current - 1]) + '%';
 })();
 
 $('#trans').click(function(e){
