@@ -95,22 +95,18 @@ body {
     z-index: 10000000000000000000000000000;
     cursor: pointer;
     outliine: none; }
-  body a {
-    width: 210px;
-    height: 40px;
-    cursor: pointer;
-    margin-top: 30px;
-    margin-left: 65px;
-    position: absolute;
-    z-index: 10; }
-    body a .logo {
+    body .logo {
+      width: 210px;
+      height: 40px;
+      cursor: pointer;
       margin-top: 30px;
       margin-left: 65px;
-      width: 100%;
-      height: 100%; }
-    body a img {
-      width: 100%;
-      height: 100%; }
+      position: absolute;
+      z-index: 100; }
+
+      body a .logo img {
+        width: 100%;
+        height: 100%; }
   body .milk {
     width: 100%;
     height: 100%;
@@ -298,27 +294,27 @@ body {
       body .wrapper .forget span {
         color: #8295C2; }
 @media screen and (max-width: 1067px) {
-        body a {
-          width: 210px;
-          height: 40px;
-          cursor: pointer;
-          margin-top: 30px;
-          position: absolute;
-          margin-left: initial;
-          z-index: 10;
-          left: 15px; }
-          body a .logo {
-            width: 100%;
-            height: 100%; }}
+  body .logo {
+    width: 210px;
+    height: 40px;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-left: 30px;
+    position: absolute;
+    margin-left: initial;
+    z-index: 10;
+    left: 15px; }
 
-            @media screen and (max-width: 1067px) and (max-width: 500px) {
-              body a {
-                width: 150px;
-                cursor: pointer;
-                margin-left: 15px; } }
-            @media screen and (max-width: 1067px) and (max-width: 500px) {
-              body a .logo {
-                margin-left: 15px; } }
+    @media screen and (max-width: 1067px) and (max-width: 500px) {
+      body a .logo {
+        width: 150px;
+        margin-top: 15px;
+        cursor: pointer;
+        margin-left: 15px; } }
+    @media screen and (max-width: 1067px) and (max-width: 500px) {
+      body a .logo {
+        margin-left: 15px;
+        margin-top: 15px; } }
 
 @media screen and (max-width: 500px) {
   body {
