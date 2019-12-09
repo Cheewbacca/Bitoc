@@ -2,7 +2,11 @@
   let progress = document.getElementById('progress-container');
   let sections = progress.getAttribute('data-progress-sections'),
     value = parseInt(progress.getAttribute('data-progress-value')),
+
     current;
+
+  let span = document.getElementById('prg');
+  span.textContent = value;
 
   if(isNaN(value) || value < 0) throw new Error('Invalid progress value');
   
